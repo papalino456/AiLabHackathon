@@ -10,6 +10,6 @@ app.listen(process.env.PORT || 1234, () => {
 
 app.get("/", function(req,res){
     //show data to user entering via web browser, won't be using get in esp
-    res.sendFile(__dirname + '/WebPage/main.html'); 
+    res.sendFile(__dirname + '/WebPage/index.html'); 
     console.log("get request made")
 });
