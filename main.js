@@ -11,5 +11,8 @@ app.listen(process.env.PORT || 1234, () => {
 app.get("/", function(req,res){
     //show data to user entering via web browser, won't be using get in esp
     res.sendFile(__dirname + '/WebPage/index.html'); 
-    console.log("get request made")
 });
+
+app.get("/api", (req, res) => {
+    res.json({ message: "Hello from server!" });
+  });
