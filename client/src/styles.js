@@ -2,7 +2,7 @@ import { makeStyles } from "@material-ui/core";
 
 export default makeStyles(() => ({
     bar: {
-      marginBottom: "89px"
+      marginBottom: "69px"
     },
     appBar: {
         //borderRadius: 15,
