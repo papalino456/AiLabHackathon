@@ -19,10 +19,12 @@ const App = () => {
 
     return (
         <Container maxWidth="lg">
-            <AppBar className={classes.appBar} position="static" color="inherit">
+            <div className={classes.bar}>
+            <AppBar className={classes.appBar} position="absolute" color="inherit" >
                 <Typography className={classes.heading} variant="h2" align="center">Vr-gram</Typography>
                 <img className={classes.image} src={ logo } alt="VR-gram" height="60"></img>
             </AppBar>
+            </div>
             <Grow in>
                 <Container>
                     <Grid container justifyContent="space-between" alignItems="stretch" spacing={3}>
