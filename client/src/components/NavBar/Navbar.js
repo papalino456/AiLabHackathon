@@ -12,11 +12,7 @@ const Navbar = () => {
         <img className={classes.image} src={ logo } alt="VR-gram" height="60"></img>
         </div>
         <Toolbar className={classes.toolbar}>
-            {user ? (
 
-            ) : (
-                
-            )}
         </Toolbar>
     </AppBar>
   )
