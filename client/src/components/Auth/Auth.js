@@ -8,6 +8,7 @@ import Input from "./Input"
 import Icon from "./Icon"
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
+import { signin, signup } from '../../actions/auth';
 
 const Auth = () => {
     const dispatch = useDispatch();
@@ -22,24 +23,29 @@ const Auth = () => {
          gapi.load('client:auth2', initClient);
      });
 
+    const initialState = {firstName: '', lastName: '', email:'', password:'', confirmPassword:''}
     const history = useHistory()
-
     const classes = useStyles()
-
     const [showPassword, setShowPassword] = useState(false);
-
     const [isSignup, setIsSignup] = useState(false)
-
+    const [formData, setFormData] = useState(initialState)
     const handleShowPassword = () => setShowPassword((prevShowPassword) => !prevShowPassword)
 
-    const handleSubmit = () =>{
-
+    const handleSubmit = (e) =>{
+        e.preventDefault()
+        if(isSignup) {
+            dispatch(signup(formData, history))
+        }else {
+            dispatch(signin(formData, history))
+        }
     }
-    const handleChange = () =>{
-
+    const handleChange = (e) =>{
+        setFormData({ ...formData, [e.target.name]: e.target.value})
     }
     const switchMode = () => {
         setIsSignup((prevIsSignup) => !prevIsSignup)
+        setShowPassword(false)
+        setFormData(initialState)
     }
     const GoogleSuccess = async (res) => {
         const result = res?.profileObj
