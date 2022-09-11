@@ -29,12 +29,12 @@ const Profile = () => {
             <Form className={classes.Form}/>
         
             <Typography variant='h6'>Your posts</Typography>
-            {posts.map((post) => (
+            {posts.filter((post) => ( post.creator === user?.creator ?
                     <Grid disableGutters key={post._id} item xs={12} sm={24}>
                         <Post post={post}/>
                     </Grid>
+                    :(null)
                 ))}
-
           </Grid>
 
         </Paper>
