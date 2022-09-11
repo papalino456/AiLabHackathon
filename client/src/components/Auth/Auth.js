@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react'
-import { Avatar, Button, Paper, Grid, Typography, Container, TextField } from '@material-ui/core'
+import { Avatar, Button, Paper, Grid, Typography, Container } from '@material-ui/core'
 import { GoogleLogin } from "react-google-login"
 import { gapi } from 'gapi-script';
 import useStyles from "./styles"
 import LockOutlinedIcon from "@material-ui/icons/LockOutlined"
 import Input from "./Input"
-import Icon from "./Icon"
+
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { signin, signup } from '../../actions/auth';
