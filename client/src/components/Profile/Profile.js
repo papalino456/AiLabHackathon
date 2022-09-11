@@ -1,5 +1,5 @@
 
-import { Card, Avatar, Grid, Typography, Paper, Button, CardMedia } from '@material-ui/core'
+import { Card, Avatar, Grid, Typography, Paper, Button } from '@material-ui/core'
 import React, { useState } from 'react'
 import useStyles from "./styles"
 import Form from "../Form/Form"
