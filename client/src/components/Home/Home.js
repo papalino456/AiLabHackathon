@@ -15,12 +15,12 @@ const Home = () => {
 
   return (
     <Grow in>
-    <Container>
-        <Grid container justifyContent="space-between" alignItems="stretch" spacing={3}>
-            <Grid item xs={12} sm={12}>
+    <Container disableGutters>
+        <Grid container spacing={3}>
+            <Grid item xs={12} sm={24}>
                 <Posts/>
+                <Form/> {/* MOVER ESTO A LA PAGINA DE PERFIL */}
             </Grid>
-            <Form/> {/* MOVER ESTO A LA PAGINA DE PERFIL */}
         </Grid>
     </Container>
     </Grow>

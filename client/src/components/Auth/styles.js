@@ -2,7 +2,8 @@ import { makeStyles } from '@material-ui/core/styles';
 
 export default makeStyles((theme) => ({
   paper: {
-    marginTop: theme.spacing(8),
+    borderRadius: 15,
+    marginTop: theme.spacing(50),
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',

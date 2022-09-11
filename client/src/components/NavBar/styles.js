@@ -8,7 +8,6 @@ export default makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
-    alignItems: 'center',
     padding: '10px 50px',
     [theme.breakpoints.down('sm')]: {
       flexDirection: 'column',
@@ -34,8 +33,7 @@ export default makeStyles((theme) => ({
   },
   profile: {
     display: 'flex',
-    justifyContent: 'space-between',
-    width: '400px',
+
     alignItems: 'center',
     [theme.breakpoints.down('sm')]: {
       width: 'auto',
@@ -44,12 +42,13 @@ export default makeStyles((theme) => ({
     },
   },
   logout: {
-    marginLeft: '20px',
+    marginRight: '20px',
   },
   userName: {
     display: 'flex',
     alignItems: 'center',
     textAlign: 'center',
+    marginLeft: '20px'
   },
   brandContainer: {
     display: 'flex',
