@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API = axios.create({ baseURL: 'http://localhost:1234' });
+const API = axios.create({ baseURL: 'https://vr-gram.herokuapp.com' });
 
 API.interceptors.request.use((req) => {
     if(localStorage.getItem('profile')) {
